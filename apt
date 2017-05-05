@@ -1,0 +1,4 @@
+#!/bin/bash
+spd-say 'Downloading started'
+sleep 2
+/usr/bin/apt "$@"; spd-say 'Downloading finished'

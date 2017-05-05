@@ -22,7 +22,7 @@ class MainWin(Gtk.Window):
         self.view.set_transparent(True)
         self.view.override_background_color(Gtk.StateFlags.NORMAL, Gdk.RGBA(0,0,0,0))
         self.view.props.settings.props.enable_default_context_menu = False
-        self.view.load_uri("file:///home/manthan/Development/OsProject/animations.html")
+        self.view.load_uri("file:///home/manchanda/WorkSpace/OsProject/animations.html")
 
         box = Gtk.Box()
         self.add(box)
@@ -44,7 +44,7 @@ def file_changed(monitor, file, unknown, event):
 
 if __name__ == '__main__':
     mainwin = MainWin()
-    gio_file = Gio.File.new_for_path("/home/manthan/Development/OsProject/animations.html")
+    gio_file = Gio.File.new_for_path("/home/manchanda/WorkSpace/OsProject/animations.html")
     monitor = gio_file.monitor_file(Gio.FileMonitorFlags.NONE, None)
     monitor.connect("changed", file_changed)
 
